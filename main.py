@@ -46,3 +46,11 @@ y_test_pred = best_model.predict(X_test)
 
 test_accuracy = accuracy_score(y_test, y_test_pred)
 print(f'Accuracy on test set using the best model: {test_accuracy}')
+
+for i in range(0, 30):
+    # Lấy một hàng từ tập dữ liệu Iris để thay thế new_data_point
+    new_data_point = [X_test[i]]
+
+    # Dự đoán nhãn cho điểm dữ liệu mới
+    new_data_pred = best_model.predict(new_data_point)
+    print(f'{i:02d} -> {new_data_point}: {new_data_pred}')
