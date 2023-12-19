@@ -3,6 +3,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import GridSearchCV
 
 # Ví dụ về việc sử dụng dữ liệu iris từ scikit-learn
 data = datasets.load_iris()
@@ -24,8 +25,6 @@ y_pred = model.predict(X_test)
 # Đánh giá mô hình
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}')
-
-from sklearn.model_selection import GridSearchCV
 
 # Thiết lập các giá trị tham số bạn muốn thử nghiệm
 param_grid = {
